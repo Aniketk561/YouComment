@@ -1,0 +1,41 @@
+{
+	"name": "YouTube Comment Telegram Bot",
+  	"description": "Comment 1st on New Video of Any YouTuber You Want!",
+  	"repository": "https://github.com/wrecker3000/YouComment Bot",
+  	"keywords": ["selenium", "chromedriver", "python"],
+  	"env": {
+    "BOT_TOKEN": {
+    	"description": "Telegram Bot Token"
+    	},
+
+    "PASSWORD": {
+      "description": "Google Account password [Can Write null Until You need It!]"
+    	},
+
+    "MESSAGE": {
+      "description": "The Meesage to Comment on New Video"
+      },
+
+    "EMAIL": {
+      "description": "Google Account Username/Email [Can Write null Until You need It!]"
+    	}
+
+  	},
+
+  	"buildpacks": [
+      {
+         "url": "heroku/python"
+      },
+
+
+      {
+      	"url": "https://github.com/heroku/heroku-buildpack-chromedriver"
+      },
+
+      {
+        "url": "https://github.com/wrecker3000/heroku-buildpack-google-chrome"
+      }
+  ],
+
+  "stack": "heroku-18"
+}
