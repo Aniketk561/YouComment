@@ -92,7 +92,7 @@ def youtube(update,context):
 			browser.refresh()
 			latestvid = browser.find_element_by_xpath('/html/body/ytd-app/div/ytd-page-manager/ytd-browse/ytd-two-column-browse-results-renderer/div[1]/ytd-section-list-renderer/div[2]/ytd-item-section-renderer/div[3]/ytd-grid-renderer/div[1]/ytd-grid-video-renderer[1]/div[1]/div[1]/div[1]/h3')
 			title = str(latestvid.text)
-			if (x != title):
+			if (x != title and x != 0):
 				browser.find_element_by_xpath('//*[@id="items"]/ytd-grid-video-renderer[1]').click()
 				time.sleep(5)
 				channel = str(browser.find_element_by_xpath('/html/body/ytd-app/div/ytd-page-manager/ytd-watch-flexy/div[4]/div[1]/div/div[6]/div[3]/ytd-video-secondary-info-renderer/div/div[2]/ytd-video-owner-renderer/div[1]/ytd-channel-name/div/div').text)
